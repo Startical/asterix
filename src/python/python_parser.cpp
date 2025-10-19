@@ -28,7 +28,24 @@
 #include "AsterixDefinition.h"
 #include "XMLParser.h"
 #include "InputParser.h"
-#include <sys/time.h>
+#ifdef _WIN32
+    #include <windows.h>
+    #include <chrono>
+#else
+    #include <sys/time.h>
+#endif
+
+#ifdef _WIN32
+int gettimeofday(struct timeval* tp, void* tzp)
+{
+    namespace sc = std::chrono;
+    auto now = sc::system_clock::now();
+    auto epoch = now.time_since_epoch();
+    tp->tv_sec = (long)sc::duration_cast<sc::seconds>(epoch).count();
+    tp->tv_usec = (long)sc::duration_cast<sc::microseconds>(epoch).count() % 1000000;
+    return 0;
+}
+#endif
 
 static AsterixDefinition *pDefinition = NULL;
 static InputParser *inputParser = NULL;

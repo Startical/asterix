@@ -50,6 +50,13 @@ Example:
     asterix.init(path_to_your_config_file)
 
 """
+import sys
+import os
+
+# Add the build directory to the Python path
+build_dir = os.path.join(os.path.dirname(__file__),'..','build')
+sys.path.append(os.path.abspath(build_dir))
+
 import _asterix
 
 try:
