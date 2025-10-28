@@ -1,12 +1,12 @@
-Metadata-Version: 2.1
-Name: asterix-decoder
+Metadata-Version: 2.4
+Name: asterix_decoder
 Version: 0.7.9
 Summary: ASTERIX decoder in Python
 Home-page: https://github.com/CroatiaControlLtd/asterix
+Download-URL: https://github.com/CroatiaControlLtd/asterix
 Author: Damir Salantic
 Author-email: damir.salantic@gmail.com
 License: GPL
-Download-URL: https://github.com/CroatiaControlLtd/asterix
 Keywords: asterix,eurocontrol,radar,track,croatiacontrol
 Platform: any
 Classifier: Development Status :: 3 - Alpha
@@ -27,6 +27,17 @@ Classifier: Programming Language :: Python :: 3.9
 Classifier: Programming Language :: Python :: 3.10
 License-File: LICENSE
 License-File: COPYING
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: download-url
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: license-file
+Dynamic: platform
+Dynamic: summary
 
 asterix
 =======
@@ -42,7 +53,5 @@ Asterix application was developed by Croatia Control Ltd.
 Python module developed by Damir Salantic.
 
 This program comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome to redistribute it under certain conditions. See COPYING file for details.
-
-
 
 
