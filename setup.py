@@ -72,9 +72,8 @@ asterix_module = Extension('_asterix',
                                     './src/asterix/XMLParser.cpp',
                                     ],
 
-                           include_dirs=['./asterix/python', './src/asterix', './src/engine', r'C:\Users\plnegro\source\repos\lib\vcpkg\installed\x64-windows\include'],
-                           #extra_objects=[r"C:/Users/plnegro/source/repos/lib/expat/lib/libexpat.lib"],
-                           library_dirs=[r'C:\Users\plnegro\source\repos\lib\vcpkg\installed\x64-windows\lib'],
+                           include_dirs=['./asterix/python', './src/asterix', './src/engine', r'./x64-windows/include'],                      
+                           library_dirs=[r'./x64-windows/lib'],
                            libraries=['libexpat'],
                            extra_compile_args=['-DPYTHON_WRAPPER']) #extra_link_args=['-lexpat']
 
